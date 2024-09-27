@@ -52,6 +52,7 @@ app.use("/auth", authRoutes);
 app.use("/users", userRoutes);
 app.use("/posts", postRoutes);
 
+
 /* MONGOOSE SETUP */
 const PORT = process.env.PORT || 6001;
 mongoose
@@ -67,3 +68,11 @@ mongoose
     // Post.insertMany(posts);
   })
   .catch((error) => console.log(`${error} did not connect`));
+
+
+  app.get('/', (req, res) => {
+    res.send('Hello World!')
+  })
+
+
+
